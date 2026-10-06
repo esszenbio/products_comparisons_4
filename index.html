@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSZENBIO 專屬組合 (動態折扣實戰版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #0f172a; color: #f8fafc; padding-bottom: 80px; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
+        .text-gold { color: #fbbf24; }
+        .bg-gold { background-color: #fbbf24; }
+        .bg-red-alert { background-color: #ef4444; }
+        .bg-gray-competitor { background-color: #64748b; }
+        .bg-gray-original { background-color: #475569; }
+        
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide-in { animation: slideIn 0.6s ease-out forwards; }
+        
+        .bar-container { width: 100%; height: 28px; background: rgba(0,0,0,0.3); border-radius: 14px; overflow: hidden; position: relative; margin-top: 8px; }
+        .bar-fill { height: 100%; border-radius: 14px; display: flex; align-items: center; padding-left: 16px; font-weight: bold; font-size: 0.95rem; transition: width 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        
+        <!-- 首頁：科學定錨與核心戰略 -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in">
+            <h1 class="text-3xl md:text-5xl font-black text-center mb-6">👑 ESSZENBIO 植萃胜肽微分子</h1>
+            <h2 class="text-xl md:text-2xl text-center text-gold font-bold mb-8">超越日常保養，遇見肌膚最純粹的力量</h2>
+            
+            <div class="bg-slate-800 rounded-2xl p-6 border-l-4 border-gold">
+                <h3 class="text-xl font-bold mb-4 text-white">✨ 為什麼我們堅持「分離包裝」與「掌心調配」？</h3>
+                <ul class="space-y-3 text-lg text-slate-300">
+                    <li>✓ <strong>純淨的堅持：</strong>我們捨棄了用化學界面活性劑強行融合油水，最大程度保護了珍貴的成分，讓保養回歸安心與純粹。</li>
+                    <li>✓ <strong>貼近肌膚的溫柔：</strong>將水相 [源] 與油相 [潤] 獨立裝瓶。當妳在掌心將它們輕輕揉合，體溫會讓它們瞬間化為最親膚的微乳液。</li>
+                    <li>✓ <strong>深入肌底的呵護：</strong>我們的微小分子能輕柔地穿透肌膚屏障，保護脆弱的胜肽成分，將滿滿的精華安穩送達肌底。</li>
+                    <li>✓ <strong>給肌膚真正需要的：</strong>每一滴都是不被稀釋的純粹原萃 (Booster)，讓妳能隨心調配，給肌膚最準確的滋養。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 A -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.1s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅰️ 組合 A：澎彈拉提組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+丰】 ｜ 瞬間柔軟角質，給肌膚深層的修護</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="9340">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">9,340</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$8,220</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $9,340</div></div>
+                <div class="bar-container bar-price-block" data-base="9340"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">8,220</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 隨著每天的天氣與心情，自由調整 [源] 與 [潤] 的比例，為自己調配出一層最透氣的隱形保護膜。</li>
+                    <li>✓ 滴入蘊含「蜂王漿胜肽」與「沙棘果精華」的 [丰]，幫肌膚抵禦外在的環境壓力，找回健康的彈性。</li>
+                    <li>✓ 微小分子能溫柔滲透，像給肌膚喝飽了水，深層修護一整天的疲憊與暗沈。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 B -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.2s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅱️ 組合 B：逆齡撫紋組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+炁】 ｜ 喚醒鮮活好氣色，溫柔撫平歲月痕跡</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="9340">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">9,340</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$8,220</span>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $9,340</div></div>
+                <div class="bar-container bar-price-block" data-base="9340"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">8,220</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5 mt-6">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 把珍貴的人參化為更好吸收的微分子胜肽，輕柔地喚醒肌膚原有的活力。</li>
+                    <li>✓ 搭配專利的五胜肽，能針對在意的小細紋進行深度的滋養與撫平。</li>
+                    <li>✓ 透過掌心的溫度，把滿滿的精華包覆起來，溫暖地送進肌底，感受肌膚慢慢變得緊緻澎潤。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 C -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.3s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅲 組合 C：淨白淡斑組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+澤】 ｜ 溫和穩定，養出由內而外的透亮淨白</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="9340">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">9,340</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$8,220</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $9,340</div></div>
+                <div class="bar-container bar-price-block" data-base="9340"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">8,220</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 追求透亮不該讓肌膚變得脆弱。我們先用 [源+潤] 做好溫和的保濕打底，保護好肌膚的天然屏障。</li>
+                    <li>✓ 接著滴入 [澤]，讓裡面的傳明酸與蜂王漿精華，一邊安撫肌膚，一邊溫柔地淡化暗沈。</li>
+                    <li>✓ 不帶負擔的純粹配方，即便是比較敏弱的肌膚，也能安心養出從內透出來的乾淨光澤。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 D -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.4s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅳 組合 D：水潤提亮組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+蘊】 ｜ 深層滋養，帶來琥珀般的柔潤鎖水</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="8040">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">8,040</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$7,070</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $8,040</div></div>
+                <div class="bar-container bar-price-block" data-base="8040"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">7,070</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 如果妳的肌膚特別容易感到乾渴，[蘊] 裡滿滿的沙棘果油與神經醯胺，能給予最深層的柔潤包覆。</li>
+                    <li>✓ 豐富的 Omega-7 就像肌膚的天然補品，能溫柔填補乾燥帶來的粗糙感，帶來極致的修護。</li>
+                    <li>✓ 享受被植萃油脂輕柔擁抱的感覺，把水分牢牢鎖住，讓肌膚重回絲緞般的觸感。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 E -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.5s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅴 組合 E：極緻澎彈撫紋組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+丰+炁】 ｜ 雙重奢華滋養，留住青春的美好</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="13320">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">13,320</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$11,720</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $13,320</div></div>
+                <div class="bar-container bar-price-block" data-base="13320"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">11,720</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 把抗老的極致呵護一次給足，「蜂王漿」搭配「人參胜肽」，為肌膚帶來最奢華的滋養。</li>
+                    <li>✓ 一邊安撫修護疲憊的細胞，一邊針對歲月留下的痕跡進行深度的緊緻與撫平。</li>
+                    <li>✓ 不需要繁瑣的瓶瓶罐罐，在掌心溫和調配，就能讓肌膚感受到最純粹的澎潤與美好。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 F -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.6s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅵 組合 F：光采無暇淨白組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+丰+澤】 ｜ 頂級專屬呵護，先修護再透出健康淨白</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="13320">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">13,320</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$11,720</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $13,320</div></div>
+                <div class="bar-container bar-price-block" data-base="13320"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">11,720</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 我們深信，健康的肌膚才能白得透亮。先用蜂王漿舒緩肌膚的小情緒，再進行溫和的淡斑。</li>
+                    <li>✓ 傳明酸加上蜂王漿精華，不僅是提亮膚色，更是找回肌膚原本的健康好氣色。</li>
+                    <li>✓ 每天看著鏡子裡的自己，感受那種不只白皙、更是從肌底散發出充滿活力的細緻光澤。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 G -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in" style="animation-delay: 0.7s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-white">🅶 組合 G：活萃精華組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【丰+炁+澤+蘊】 ｜ 純粹原萃，妳專屬的高訂保養精華櫃</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="14620">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">14,620</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$12,860</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <p class="text-sm text-slate-400 mb-2 font-bold">💰 專屬優惠 (原價 vs. 優惠價)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-original text-slate-200" style="width: 100%;">原價 $14,620</div></div>
+                <div class="bar-container bar-price-block" data-base="14620"><div class="bar-fill bg-gold text-black" style="width: 88%;">優惠價 $<span class="bar-display-new">12,860</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5 mt-6">
+                <h4 class="font-bold text-gold mb-2">✨ 專屬妳的保養巧思</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ 這是一組專為懂得照顧自己的妳準備的「純精華組合」，裡面裝滿了最純粹的保養原力。</li>
+                    <li>✓ 無論今天是需要蜂王漿的修護、人參的緊緻，還是傳明酸的透亮，妳都能在這裡找到解答。</li>
+                    <li>✓ 只要滴入妳平常慣用的乳霜裡，就能不受限制地，每天為自己訂製專屬的深度保養。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 組合 H -->
+        <div class="glass-card rounded-3xl p-8 animate-slide-in border border-gold/50 relative overflow-hidden" style="animation-delay: 0.8s;">
+            <!-- 頂奢裝飾光暈 -->
+            <div class="absolute -right-10 -top-10 w-32 h-32 bg-gold/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 border-b border-slate-600 pb-4 relative z-10">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-gradient-to-r from-gray-900 to-gray-700 text-gold text-xs font-bold px-3 py-1 rounded-full shadow-sm border border-gold/30">👑 頂奢大滿貫</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white">🅷 組合 H：尊榮全效養護組</h2>
+                    <p class="text-lg text-slate-400 mt-2">【源+潤+丰+炁+澤+蘊】 ｜ 全效呵護，為肌膚量身訂製的專屬療程</p>
+                </div>
+                <div class="text-left md:text-right mt-4 md:mt-0 price-block" data-base="19980">
+                    <p class="text-lg text-slate-400 line-through mb-1">原價 $<span class="display-base">19,980</span></p>
+                    <span class="text-gold font-black text-4xl display-new">$17,580</span>
+                </div>
+            </div>
+
+            <!-- 機能與容量對比 -->
+            <div class="mb-6 relative z-10">
+                <p class="text-sm text-slate-400 mb-2 font-bold">🧪 屬於妳的保養自由 (單一配方 vs. 專屬全效呵護)</p>
+                <div class="bar-container"><div class="bar-fill bg-gray-competitor text-white text-xs md:text-sm" style="width: 50%;">國際經典系列 (專注單一抗老或修護機能) 約 50~80ml</div></div>
+                <div class="bar-container"><div class="bar-fill bg-gold text-black text-xs md:text-sm" style="width: 100%;">ESSZENBIO (保濕/抗老/淨白/鎖水全效呵護) 120ml</div></div>
+            </div>
+
+            <!-- 專屬全效機能星級評鑑與競品嚴謹對標 -->
+            <div class="mb-8 relative z-10 bg-slate-900/60 rounded-2xl p-4 md:p-6 border border-gold/30 shadow-lg overflow-hidden">
+                <p class="text-sm text-slate-300 mb-4 font-bold flex items-center gap-2">
+                    🌟 頂級保養的真實體驗對比 (用心感受差異)
+                </p>
+                <div class="overflow-x-auto pb-2">
+                    <table class="w-full text-left text-xs md:text-sm whitespace-nowrap">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="py-3 px-2 text-slate-300 font-medium">保養重點</th>
+                                <th class="py-3 px-2 text-gold font-bold bg-gold/10 rounded-t-lg">ESSZENBIO<br><span class="text-[10px] md:text-xs font-normal">👑 專屬全效呵護</span></th>
+                                <th class="py-3 px-2 text-slate-400 font-medium">萊X妮<br><span class="text-[10px] md:text-xs font-normal">(經典抗老)</span></th>
+                                <th class="py-3 px-2 text-slate-400 font-medium">嬌X<br><span class="text-[10px] md:text-xs font-normal">(深層修護)</span></th>
+                                <th class="py-3 px-2 text-slate-400 font-medium">海X娜<br><span class="text-[10px] md:text-xs font-normal">(極致保濕)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700/50">
+                            <!-- Row 1 -->
+                            <tr>
+                                <td class="py-3 px-2 text-white">1. 美白袪斑 <span class="bg-blue-900/50 text-blue-300 border border-blue-500/30 px-1.5 py-0.5 rounded text-xs ml-1 font-bold tracking-widest">[澤]</span></td>
+                                <td class="py-3 px-2 text-gold tracking-widest bg-gold/10 font-bold drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★<span class="text-slate-600">★★★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★<span class="text-slate-600">★★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★<span class="text-slate-600">★★</span></td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                                <td class="py-3 px-2 text-white">2. 修護拉提 <span class="bg-amber-900/50 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded text-xs ml-1 font-bold tracking-widest">[丰]</span></td>
+                                <td class="py-3 px-2 text-gold tracking-widest bg-gold/10 font-bold drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                                <td class="py-3 px-2 text-white">3. 緊緻 / 撫紋 <span class="bg-red-900/50 text-red-300 border border-red-500/30 px-1.5 py-0.5 rounded text-xs ml-1 font-bold tracking-widest">[炁]</span></td>
+                                <td class="py-3 px-2 text-gold tracking-widest bg-gold/10 font-bold drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★<span class="text-slate-600">★★</span></td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr>
+                                <td class="py-3 px-2 text-white">4. 抗老膠原蛋白 <span class="bg-red-900/50 text-red-300 border border-red-500/30 px-1.5 py-0.5 rounded text-xs ml-1 font-bold tracking-widest">[炁]</span></td>
+                                <td class="py-3 px-2 text-gold tracking-widest bg-gold/10 font-bold drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr>
+                                <td class="py-3 px-2 text-white">5. 極潤 / 修護 <span class="bg-orange-900/50 text-orange-300 border border-orange-500/30 px-1.5 py-0.5 rounded text-xs ml-1 font-bold tracking-widest">[蘊]</span></td>
+                                <td class="py-3 px-2 text-gold tracking-widest bg-gold/10 font-bold rounded-b-lg drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★<span class="text-slate-600">★</span></td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★★</td>
+                                <td class="py-3 px-2 text-slate-300 tracking-widest">★★★★★</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+                    <strong class="text-slate-300">✨ 關於這份保養評估的小秘密：</strong><br>
+                    • <strong class="text-slate-200">萊X妮：</strong>市面上非常優秀的抗老經典，對抗歲月痕跡效果極佳，但在美白淡斑的著墨上相對溫和。<br>
+                    • <strong class="text-slate-200">嬌X：</strong>主打深層的修護與滋潤拉提，但在專門撫平細紋的胜肽成分上，不是它的主要訴求。<br>
+                    • <strong class="text-slate-200">海X娜：</strong>鎖水與安撫肌膚的能力令人驚豔，但在專門對抗細紋與提亮膚色方面，少了些針對性的成分。<br>
+                    <strong class="text-gold mt-2 block">👑 為什麼我們能給肌膚最完整的呵護？</strong>傳統保養品為了維持一罐的穩定，往往無法同時加入高濃度的抗老與美白成分。而我們將 4 支高純度原萃獨立保存，讓妳能隨心所欲地為今天的肌膚調配出最完美的比例，保濕、透亮、緊緻一次擁有。
+                </p>
+            </div>
+
+            <!-- 市場情報與價格對比 -->
+            <div class="mb-8 relative z-10">
+                <div class="flex justify-between items-end mb-2">
+                    <p class="text-sm text-slate-400 font-bold">💰 聰明的美麗投資 (專櫃經典 vs. 專屬高訂)</p>
+                    <p class="text-xs text-red-400 font-bold bg-red-400/10 px-2 py-1 rounded">把預算花在真正的成分上</p>
+                </div>
+                <!-- 競品價格色棒 -->
+                <div class="bar-container"><div class="bar-fill bg-red-alert text-white text-xs md:text-sm" style="width: 100%;">萊X妮 (鉑金臻稀系列) 約 $98,000</div></div>
+                <div class="bar-container"><div class="bar-fill bg-red-alert text-white text-xs md:text-sm" style="width: 58%;">嬌X (黑蘭鑽極萃系列) 約 $57,000</div></div>
+                <div class="bar-container"><div class="bar-fill bg-red-alert text-white text-xs md:text-sm" style="width: 52%;">海X娜 (創世紀原晶系列) 約 $51,000</div></div>
+                <!-- H組動態折扣色棒 -->
+                <div class="bar-container bar-price-block" data-base="19980"><div class="bar-fill text-black text-xs md:text-sm" style="background-color: #fbbf24; width: 18%;">ESSZENBIO 優惠價 $<span class="bar-display-new">17,580</span></div></div>
+            </div>
+
+            <div class="bg-slate-800 rounded-xl p-5 mt-6 relative z-10">
+                <h4 class="font-bold text-gold mb-2">✨ 獻給懂保養的妳</h4>
+                <ul class="text-slate-300 space-y-2">
+                    <li>✓ <strong>完整的極致呵護：</strong> 把抗老的胜肽撫紋 `[炁]`、極致的溫柔修護 `[丰]` 與深層的保濕鎖水 `[蘊]` 一次收集，給肌膚最全面的照顧。</li>
+                    <li>✓ <strong>妳的專屬保養特權：</strong> 不再受限於同一罐乳霜。今天想透亮就加點 `[澤]`，明天想緊緻就加點 `[炁]`，每天的保養由妳自己作主。</li>
+                    <li>✓ <strong>菁英奢華保養美學：</strong> 真正頂級的保養，應該是讓『保養品來配合妳的肌膚』，而不是逼『妳的肌膚去適應保養品』。</li>
+                    <li class="pt-3 mt-3 border-t border-slate-700 text-gold font-bold flex items-center gap-2">
+                        🎁 專屬尊榮禮遇：購買即贈送精品美妝包一個 (價值 2,200 元)。
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 右下角浮動設定按鈕 -->
+    <button onclick="requestAdminAccess()" class="fixed bottom-6 right-6 bg-slate-800 hover:bg-slate-700 transition p-4 rounded-full border-2 border-gold text-gold shadow-[0_0_15px_rgba(251,191,36,0.5)] z-40">
+        ⚙ 經銷折扣設定
+    </button>
+
+    <!-- 隱藏的底部折扣控制面板 -->
+    <div id="adminPanel" class="hidden fixed bottom-0 left-0 w-full bg-slate-900 border-t-2 border-gold p-6 z-50 shadow-2xl transition-transform transform translate-y-0">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-4">
+                <span class="text-white font-bold text-lg">目前系統授權折數：</span>
+                <span class="text-gold font-black text-3xl"><span id="discountValue">88</span>%</span>
+            </div>
+            
+            <div class="flex-1 px-8">
+                <input type="range" id="discountSlider" min="50" max="100" value="88" class="w-full h-3 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-gold">
+            </div>
+            
+            <button onclick="closeAdminPanel()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg transition">
+                儲存並關閉
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 設定專屬密碼
+        const AUTH_PASSWORD = "esszen888";
+
+        function requestAdminAccess() {
+            const panel = document.getElementById('adminPanel');
+            if (panel.classList.contains('hidden')) {
+                const pwd = prompt("🔒 請輸入經銷商專屬密碼以解鎖折扣設定：");
+                if (pwd === AUTH_PASSWORD) {
+                    panel.classList.remove('hidden');
+                } else if (pwd !== null) {
+                    alert("❌ 密碼錯誤，拒絕存取。");
+                }
+            } else {
+                closeAdminPanel();
+            }
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminPanel').classList.add('hidden');
+        }
+
+        // 監聽拉桿數值變化
+        document.getElementById('discountSlider').addEventListener('input', function(e) {
+            const currentDiscountRate = e.target.value;
+            document.getElementById('discountValue').innerText = currentDiscountRate;
+            updateAllPrices(currentDiscountRate / 100);
+        });
+
+        // 動態計算並更新畫面上的所有價錢
+        function updateAllPrices(rate) {
+            // 更新每一組右上角的價位區塊
+            document.querySelectorAll('.price-block').forEach(block => {
+                const basePrice = parseInt(block.getAttribute('data-base'));
+                const calculatedNewPrice = Math.round(basePrice * rate);
+                
+                block.querySelector('.display-base').innerText = basePrice.toLocaleString();
+                block.querySelector('.display-new').innerText = '$' + calculatedNewPrice.toLocaleString();
+            });
+
+            // 更新長條圖內的價位標籤
+            document.querySelectorAll('.bar-price-block').forEach(barBlock => {
+                const basePrice = parseInt(barBlock.getAttribute('data-base'));
+                const calculatedNewPrice = Math.round(basePrice * rate);
+                
+                barBlock.querySelector('.bar-display-new').innerText = calculatedNewPrice.toLocaleString();
+            });
+        }
+    </script>
+</body>
+</html>
